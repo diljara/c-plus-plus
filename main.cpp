@@ -89,7 +89,7 @@ int multiply(int numbers[80][80])
 
 
 
-float singlevalue()
+float singlevalue(int n)
 {
     int numbers[80][80] = { 0 };
     for (int i=0; i < 80; i++)
@@ -99,7 +99,7 @@ float singlevalue()
             numbers[i][j] = 1;
             }
     }
-    int n =1;
+    //int n = 80;
     int empti [80][2];
     for (int i=0; i < n; i++)
     {
@@ -127,10 +127,9 @@ return result;
 int main(){
     float avtime = 0.0;
     srand(time(NULL));
-    for (int counter = 0; counter < 500; counter++){
-        //srand(time(NULL));
-        avtime += singlevalue();
+    for (int counter = 0; counter < 400; counter++){
+        avtime += singlevalue(80 / 4);
         }
-    cout << avtime/500;
+    cout << avtime/400;
     return 0;
 }
