@@ -82,7 +82,7 @@ void GameCore::start()
 GameCore::GameCore()
 /*конструктор создает окно*/
 {
-    window = new sf::RenderWindow(sf::VideoMode(1100, 900), "SFML window");
+    window = new sf::RenderWindow({ 1100, 900 }, "Antiyoy", sf::Style::None);
 }
 
 GameCore::~GameCore()
